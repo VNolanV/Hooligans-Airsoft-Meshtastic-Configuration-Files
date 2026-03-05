@@ -1,0 +1,70 @@
+# start of Meshtastic configure yaml
+
+# meshtastic --configure hooligans_config.yaml
+channel_url: https://meshtastic.org/e/#CjMSIFJSVFZtWFNjaFRkV3lpYmJESXYxOFFoUU4zanVOY21JGgdITSBILTI1KAEwAToCCCASFQgBEAQY-gEgCygFOAFAA0gBUB5oAQ
+config:
+  bluetooth:
+    enabled: true
+    fixedPin: 123456
+    device:
+      nodeInfoBroadcastSecs: 3600
+      tzdef: EST5EDT,M3.2.0,M11.1.0
+      rebroadcastMode: KNOWN_ONLY
+  display:
+    screenOnSecs: 15
+  lora:
+    bandwidth: 250
+    codingRate: 5
+    hopLimit: 3
+    modemPreset: MEDIUM_FAST
+    region: US
+    spreadFactor: 11
+    sx126xRxBoostedGain: true
+    txEnabled: true
+    txPower: 30
+    usePreset: true
+  network:
+    ntpServer: meshtastic.pool.ntp.org
+  position:
+    broadcastSmartMinimumDistance: 5
+    broadcastSmartMinimumIntervalSecs: 15
+    gpsMode: ENABLED
+    gpsUpdateInterval: 60
+    positionBroadcastSecs: 60
+    positionBroadcastSmartEnabled: false
+    positionFlags: 224
+  power:
+    lsSecs: 300
+    minWakeSecs: 10
+    sdsSecs: 4294967295
+    waitBluetoothSecs: 60
+  security: 
+    adminKey: 
+    - 'base64:' 
+    - 'base64:' 
+    - 'base64:'
+    privateKey: 'base64:' 
+    serialEnabled: true
+module_config:
+  ambientLighting:
+    blue: 52
+    current: 10
+    green: 246
+    red: 94
+  detectionSensor:
+    detectionTriggerType: LOGIC_HIGH
+    minimumBroadcastSecs: 45
+  mqtt:
+    address: mqtt.meshtastic.org
+    encryptionEnabled: true
+    password: large4cats
+    root: msh/US
+    username: meshdev
+  telemetry:
+    deviceUpdateInterval: 2147483647
+owner: Hooligan N-33
+owner_short: N-33
+
+
+# meshtastic --export-config > example_config.yaml
+
