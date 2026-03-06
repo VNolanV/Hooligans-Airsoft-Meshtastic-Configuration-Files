@@ -1,0 +1,239 @@
+# start of Meshtastic configure yaml
+
+# https://docs.google.com/document/d/14WoFlxE_zRg1fpxkUdevn0K5rSioYIZss2zloitysqs/edit?usp=sharing
+# https://flasher.meshcore.co.uk/
+# meshtastic --reset-nodedb
+
+
+
+owner: Hooligan N-33
+owner_short: N-33
+
+# meshtastic --configure currenthooligan_config.yaml
+channel_url: https://meshtastic.org/e/#CjASIEppVllqNnJxdnp5ZGJoQWFKeGtvaDRiYnIwQlB0Uk5OGghEZWZhdWx0SDoCCCASFQgBEAMY-gEgCygFOAFAA0gBUB5oAQ
+
+config:
+  bluetooth:
+    enabled: true
+    fixedPin: 123456
+    mode: RANDOM_PIN
+
+  device:
+    nodeInfoBroadcastSecs: 3600
+    role: CLIENT
+    serialEnabled: false
+    buttonGpio: 0
+    buzzerGpio: 0
+    rebroadcastMode: LOCAL_ONLY
+    doubleTapAsButtonPress: false
+    isManaged: false
+    disableTripleClick: false
+    tzdef: EST5EDT,M3.2.0,M11.1.0
+    ledHeartbeatDisabled: false
+    buzzerMode: ALL_ENABLED
+
+  position:
+    positionBroadcastSecs: 60
+    positionBroadcastSmartEnabled: false
+    gpsUpdateInterval: 60
+    positionFlags: 224
+    broadcastSmartMinimumDistance: 100
+    broadcastSmartMinimumIntervalSecs: 30
+    gpsMode: ENABLED
+    fixedPosition: false
+    gpsEnabled: false
+    gpsAttemptTime: 0
+    rxGpio: 0
+    txGpio: 0
+    gpsEnGpio: 0
+
+  power:
+    waitBluetoothSecs: 60
+    sdsSecs: 4294967295
+    lsSecs: 4294967295
+    minWakeSecs: 10
+    isPowerSaving: false
+    onBatteryShutdownAfterSecs: 0
+    adcMultiplierOverride: 0.0
+    deviceBatteryInaAddress: 0
+    powermonEnables: "0"
+
+  network:
+    ntpServer: meshtastic.pool.ntp.org
+    wifiEnabled: false
+    wifiSsid: ""
+    wifiPsk: ""
+    ethEnabled: false
+    addressMode: DHCP
+    rsyslogServer: ""
+    enabledProtocols: 0
+    ipv6Enabled: false
+
+  display:
+    screenOnSecs: 15
+    gpsFormat: UNUSED
+    autoScreenCarouselSecs: 0
+    compassNorthTop: true
+    flipScreen: false
+    units: METRIC
+    oled: OLED_AUTO
+    displaymode: DEFAULT
+    headingBold: false
+    wakeOnTapOrMotion: false
+    compassOrientation: DEGREES_0
+    use12hClock: false
+    useLongNodeName: false
+    enableMessageBubbles: false
+
+  lora:
+    usePreset: true
+    hopLimit: 3
+    txEnabled: true
+    txPower: 30
+    sx126xRxBoostedGain: true
+    modemPreset: MEDIUM_FAST
+    bandwidth: 250
+    spreadFactor: 11
+    codingRate: 5
+    frequencyOffset: 0.0
+    region: US
+    channelNum: 0
+    overrideDutyCycle: false
+    overrideFrequency: 0.0
+    paFanDisabled: false
+    ignoreIncoming: []
+    ignoreMqtt: false
+    configOkToMqtt: false
+
+  security:
+    serialEnabled: true
+    publicKey: ""
+    privateKey: ""
+    adminKey: []
+    isManaged: false
+    debugLogApiEnabled: false
+    adminChannelEnabled: false
+
+module_config:
+  mqtt:
+    address: mqtt.meshtastic.org
+    username: meshdev
+    password: large4cats
+    encryptionEnabled: true
+    root: msh
+    enabled: false
+    jsonEnabled: false
+    tlsEnabled: false
+    proxyToClientEnabled: false
+    mapReportingEnabled: false
+
+  serial:
+    enabled: false
+    echo: false
+    rxd: 0
+    txd: 0
+    baud: BAUD_DEFAULT
+    timeout: 0
+    mode: DEFAULT
+    overrideConsoleSerialPort: false
+
+  externalNotification:
+    enabled: false
+    outputMs: 0
+    output: 0
+    outputVibra: 0
+    outputBuzzer: 0
+    active: false
+    alertMessage: false
+    alertMessageVibra: false
+    alertMessageBuzzer: false
+    alertBell: false
+    alertBellVibra: false
+    alertBellBuzzer: false
+    usePwm: false
+    nagTimeout: 0
+    useI2sAsBuzzer: false
+
+  storeForward:
+    enabled: false
+    heartbeat: false
+    records: 0
+    historyReturnMax: 0
+    historyReturnWindow: 0
+    isServer: false
+
+  rangeTest:
+    enabled: false
+    sender: 0
+    save: false
+    clearOnReboot: false
+
+  telemetry:
+    deviceUpdateInterval: 2147483647
+    environmentUpdateInterval: 0
+    environmentMeasurementEnabled: false
+    environmentScreenEnabled: false
+    environmentDisplayFahrenheit: false
+    airQualityEnabled: false
+    airQualityInterval: 0
+    powerMeasurementEnabled: false
+    powerUpdateInterval: 0
+    powerScreenEnabled: false
+    healthMeasurementEnabled: false
+    healthUpdateInterval: 0
+    healthScreenEnabled: false
+    deviceTelemetryEnabled: false
+    airQualityScreenEnabled: false
+
+  cannedMessage:
+    rotary1Enabled: false
+    inputbrokerPinA: 0
+    inputbrokerPinB: 0
+    inputbrokerPinPress: 0
+    inputbrokerEventCw: NONE
+    inputbrokerEventCcw: NONE
+    inputbrokerEventPress: NONE
+    updown1Enabled: false
+    enabled: false
+    allowInputSource: ""
+    sendBell: false
+
+  audio:
+    codec2Enabled: false
+    pttPin: 0
+    bitrate: CODEC2_DEFAULT
+    i2sWs: 0
+    i2sSd: 0
+    i2sDin: 0
+    i2sSck: 0
+
+  neighborInfo:
+    enabled: false
+    updateInterval: 0
+    transmitOverLora: false
+
+  ambientLighting:
+    current: 10
+    red: 130
+    green: 97
+    blue: 203
+    ledState: false
+
+  detectionSensor:
+    minimumBroadcastSecs: 45
+    detectionTriggerType: LOGIC_HIGH
+    enabled: false
+    stateBroadcastSecs: 0
+    sendBell: false
+    name: ""
+    monitorPin: 0
+    usePullup: false
+
+  paxcounter:
+    enabled: false
+    paxcounterUpdateInterval: 0
+    wifiThreshold: 0
+    bleThreshold: 0
+
+
+# meshtastic --export-config > example_config.yaml
