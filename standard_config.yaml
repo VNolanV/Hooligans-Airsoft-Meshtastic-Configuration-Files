@@ -2,14 +2,14 @@
 
 # https://docs.google.com/document/d/14WoFlxE_zRg1fpxkUdevn0K5rSioYIZss2zloitysqs/edit?usp=sharing
 # https://flasher.meshcore.co.uk/
-# meshtastic --reset-nodedb
+# meshtastic --configure standard_config.yaml
 
 
 
 owner: Hooligan N-33
 owner_short: N-33
 
-# meshtastic --configure currenthooligan_config.yaml
+
 channel_url: https://meshtastic.org/e/#CjASIEppVllqNnJxdnp5ZGJoQWFKeGtvaDRiYnIwQlB0Uk5OGghEZWZhdWx0SDoCCCASFQgBEAMY-gEgCygFOAFAA0gBUB5oAQ
 
 config:
