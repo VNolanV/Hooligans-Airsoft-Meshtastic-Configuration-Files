@@ -1,0 +1,4 @@
+meshtastic --export-config > example_config.yaml
+meshtastic --configure wipe_config.yaml
+meshtastic --reset-nodedb
+meshtastic --noproto

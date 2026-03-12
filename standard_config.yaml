@@ -235,5 +235,3 @@ module_config:
     wifiThreshold: 0
     bleThreshold: 0
 
-
-# meshtastic --export-config > example_config.yaml
